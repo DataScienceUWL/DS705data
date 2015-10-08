@@ -1,0 +1,16 @@
+{
+    "contents" : "## 1. save Health Exam Data.csv to a new directory\n## 2. use Session -> Set Working Directory to change to this new directory\n\nHealthExam <- read.csv(\"Health Exam Data.csv\")\nHealthExam$AgeGroup <- factor(HealthExam$AgeGroup,levels=c('1','2','3'),labels=c('18-35','36-65','65+'))\nHealthExam$Region <- factor(HealthExam$Region,c(1,2,3,4),labels=c('Midwest','Northeast','South','West'))\nHealthExam$Height[HealthExam$Sex==\"M\"] <- HealthExam$Height[HealthExam$Sex==\"M\"] + 1\n\nsave(HealthExam,file=\"HealthExam.rda\")\nrm(HealthExam)\n\nWormSheep <- read.csv(\"worms.csv\")\nsave(WormSheep,file=\"WormSheep.rda\")\nrm(WormSheep)\n\nTyping <- read.csv(\"Typing.csv\")\nTyping$Method <- factor(Typing$Method,levels=c('1','2'),labels=c('prior course','self-taught'))\nsave(Typing,file=\"Typing.rda\")\nrm(Typing)\n\nbodyFat <- read.csv(\"bodyFat.csv\")\nsave(bodyFat,file=\"bodyFat.rda\")\nrm(bodyFat)\n\nAnkleMovement <- read.csv(\"AnkleMovement.csv\")\nsave(AnkleMovement,file=\"AnkleMovement.rda\")\nrm(AnkleMovement)\n\nChicago_Building_Permits_August <- read.csv(\"Chicago_Building_Permits_August.csv\")\nsave(Chicago_Building_Permits_August,file=\"Chicago_Building_Permits_August.rda\")\nrm(Chicago_Building_Permits_August)\n\nshields <- read.csv(\"shields.csv\")\nsave(shields,file=\"shields.rda\")\nrm(shields)\n\nfine_b <- read.csv(\"fine-b.csv\")\nsave(shields,file=\"fine_b.rda\")\nrm(fine_b)\n",
+    "created" : 1436904513914.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1284997636",
+    "id" : "C1A37F91",
+    "lastKnownWriteTime" : 1436798718,
+    "path" : "~/Google Drive/DS 705 CEOEL Folder/class_material/makedatasets/BuildAllData.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

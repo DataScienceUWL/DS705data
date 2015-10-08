@@ -1,0 +1,16 @@
+{
+    "contents" : "\\name{fine-b}\n\\alias{fine-b}\n\\docType{data}\n\\title{\nWeight gain\n%%   ~~ data name/kind ... ~~\n}\n\\description{Weight gain data for rats exposed to aconiazide, \n a proposed treatment for tuberculosis.\n   Taken from Fine and Bosch, JASA, to appear 2000\n\n   For details of the study which generated these data, see\n    Dooley et al., Journal of the American College of Toxicology, 1993\n   For additional analyses of these data, see\n    Kodell and West, Risk Analysis, 1993    \n    Bosch et al., ASA Proceedings of the Biometrics Section, 1995\n    Bosch et al., Risk Analysis, 1996\n   \n   Thanks to Frederick Beland for making these data available.\n\n\n W is weight gain over the 14-day duration  \n  of the experiment, on 50 female Fischer 344 rats \n DOSE is the dose of aconiazide (mg/kg/day)\n}\n\\usage{data(\"fine-b\")}\n\\format{\n  A data frame with 50 observations on the following 2 variables.\n  \\describe{\n    \\item{\\code{W}}{Weight gain.}\n    \\item{\\code{Dose}}{Dose of aconiazide (mg/kg/day.}\n      }\n}\n\\details{\n%%  ~~ If necessary, more details than the __description__ above ~~\n}\n\\source{\n%%  ~~ reference to a publication or URL from which the data were obtained ~~\n}\n\\references{\n%%  ~~ possibly secondary sources and usages ~~\n}\n\\examples{\ndata(fine-b)\n## maybe str(fine-b) ; plot(fine-b) ...\n}\n\\keyword{datasets}\n",
+    "created" : 1436904261210.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4213296717",
+    "id" : "C5B080E0",
+    "lastKnownWriteTime" : 1436904428,
+    "path" : "~/Google Drive/DS 705 CEOEL Folder/class_material/DS705data/man/fine-b.Rd",
+    "project_path" : "man/fine-b.Rd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
