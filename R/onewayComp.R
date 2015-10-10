@@ -221,28 +221,32 @@ onewayComp <- function(formula,data,alpha=.05,var.equal=TRUE,con=NA,nboot=0,adju
     dimnames(comp.matrix) <- list(rowLabel,c("diff","lwr","upr","t","p","p adj"))
   }
   
-  # now build a pairwise matrix like output from pairwise.t.test
-  ind <- 1
-  p.value <- matrix(NA,J-1,J-1)
-  for (i in 1:(J-1)){
-    for (j in i:(J-1)){
-      p.value[j,i] <- padjust[ind]
-      ind <- ind + 1
+  if (!is.na(con)){
+    # now build a pairwise matrix like output from pairwise.t.test
+    ind <- 1
+    p.value <- matrix(NA,J-1,J-1)
+    for (i in 1:(J-1)){
+      for (j in i:(J-1)){
+        p.value[j,i] <- padjust[ind]
+        ind <- ind + 1
+      }
     }
-  }
-  dimnames(p.value) <- list(levs[2:J],levs[1:(J-1)])
-  p.adjust.method <- adjust
-  if (var.equal){
-    method <- 't tests with pooled SD'
+    dimnames(p.value) <- list(levs[2:J],levs[1:(J-1)])
+    p.adjust.method <- adjust
+    if (var.equal){
+      method <- 't tests with pooled SD'
+    } else {
+      method <- 't tests with unpooled SD'
+    }
+    nms <- names(xdf)
+    data.name <- paste(nms[1],"and",nms[2])
+    pairwt <- list(method=method,data.name=data.name,
+                   p.value=p.value,p.adjust.method=p.adjust.method)
+    class(pairwt) <- 'pairwise.htest'
+    
+    result <- list(call=cl,comp=comp.matrix,pairw=pairwt)
   } else {
-    method <- 't tests with unpooled SD'
+    result <- list(call=cl,comp=comp.matrix)
   }
-  nms <- names(xdf)
-  data.name <- paste(nms[1],"and",nms[2])
-  pairwt <- list(method=method,data.name=data.name,
-                 p.value=p.value,p.adjust.method=p.adjust.method)
-  class(pairwt) <- 'pairwise.htest'
-  
-  result <- list(call=cl,comp=comp.matrix,pairw=pairwt)
   result
 }
