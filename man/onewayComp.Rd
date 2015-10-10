@@ -20,7 +20,6 @@ onewayComp(formula,data,alpha=.05,var.equal=TRUE,con=NA,nboot=0,adjust='one.step
   \item{nboot}{if nboot=0, then t-distributions are used for P-values and critical values (including Tukey max t), but if nboot>0 then resampling is used to approximate the critical values and P-values.  For the bootstrap resampling separate samples are used and each sample is recentered so that the null hypothesis is true.}
   \item{adjust}{possible values are 'one.step' for Tukey Kramer or Games Howell procedures that give both hypothesis tests and confidence intervals (cannot be used with custom contrast matrix). 'bonferroni', 'none', 'holm', or any other adjustment that can be passed to p.adjust()}
 }
-}
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
