@@ -2,7 +2,7 @@
 \alias{regwqComp}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+reqwqComp
 }
 \description{
 Implements the multistep REGWQ procedure described in the DS705 presentations.
