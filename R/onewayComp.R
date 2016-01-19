@@ -221,7 +221,7 @@ onewayComp <- function(formula,data,alpha=.05,var.equal=TRUE,con=NA,nboot=0,adju
     dimnames(comp.matrix) <- list(rowLabel,c("diff","lwr","upr","t","p","p adj"))
   }
   
-  if (!is.na(con)){
+  if (!any(is.na(con))){
     # now build a pairwise matrix like output from pairwise.t.test
     ind <- 1
     p.value <- matrix(NA,J-1,J-1)
