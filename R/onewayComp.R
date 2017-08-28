@@ -199,8 +199,8 @@ onewayComp <- function(formula,data,alpha=.05,var.equal=TRUE,con=NA,nboot=0,adju
   if (adjust=='holm'){
     padjust <- p.adjust(p,'holm')
     reject <- (padjust<alpha)
-    comp.matrix <- cbind(psihat,ci,t.obs,p,padjust,reject)
-    dimnames(comp.matrix) <- list(rowLabel,c('diff','lwr','upr','t','p','p adj','rej H_0'))
+    comp.matrix <- cbind(psihat,t.obs,p,padjust,reject)
+    dimnames(comp.matrix) <- list(rowLabel,c('diff','t','p','p adj','rej H_0'))
   } else if (adjust=='one.step'){
     reject <- padjust < alpha
     comp.matrix <- cbind(psihat,ci,t.obs,p,padjust,reject)
@@ -217,8 +217,8 @@ onewayComp <- function(formula,data,alpha=.05,var.equal=TRUE,con=NA,nboot=0,adju
     dimnames(comp.matrix) <- list(rowLabel,c("diff","lwr","upr","t","p",'rej H_0'))
   } else {
     padjust <- p.adjust(p,adjust)
-    comp.matrix <- cbind(psihat,ci,t.obs,p,padjust)
-    dimnames(comp.matrix) <- list(rowLabel,c("diff","lwr","upr","t","p","p adj"))
+    comp.matrix <- cbind(psihat,t.obs,p,padjust)
+    dimnames(comp.matrix) <- list(rowLabel,c("diff","t","p","p adj"))
   }
   
   if (!any(is.na(con))){

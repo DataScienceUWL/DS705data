@@ -8,10 +8,10 @@ One hundred and twenty apparently healthy subjects volunteered to participate in
 \usage{data("BackUp")
 }
 \format{
-  A data frame with 120 observations on the following 2 variables.
+  A matrix with 120 observations on the following 2 variables.
   \describe{
-    \item{\code{pre}}{Lumbar extension strength in Nm before 10 weeks of variable resistance lumbar extension exercise training.}
-    \item{\code{post}}{Lumbar extension strength in Nm after 10 weeks of variable resistance lumbar extension exercise training.}
+    \item{\code{pre}}{Lumbar extension strength in Nm before 10 weeks of variable resistance lumbar extension exercise training. This is the first column of the matrix.}
+    \item{\code{post}}{Lumbar extension strength in Nm after 10 weeks of variable resistance lumbar extension exercise training. This is the second column of the matrix.}
 }}
 \details{
 %%  ~~ If necessary, more details than the description above ~~
