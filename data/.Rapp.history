@@ -1,1 +1,2 @@
 load("/Users/jbaggett/Dropbox/baggett_work/DSUWL_github/DS705data/data/diamond.rda")
+load("/Users/jbaggett/Dropbox/baggett_work/DSUWL_github/DS705data/data/careerbarrier.rda")

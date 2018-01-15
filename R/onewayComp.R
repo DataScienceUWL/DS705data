@@ -143,7 +143,10 @@ onewayComp <- function(formula,data,alpha=.05,var.equal=TRUE,con=NA,nboot=0,adju
         ci[j,2] <- NA
       }
       t.obs[j] <- as.numeric(mean.diff/se)
-      p[j] <- sum( abs(tstat[,j]) > abs(t.obs[j]) )/nboot
+      # the orginal way of computing the p-values assumes symmetry
+      # p[j] <- sum( abs(tstat[,j]) > abs(t.obs[j]) )/nboot
+      # instead we'll double the smaller tail
+      p[j] <- 2*min( sum( tstat[,j] < t.ojb[j]), sum( tstat[,j] > t.obs[j] ) )/nboot
       padjust[j] <- sum( qstat>abs(t.obs[j]) )/nboot
     }
   } else { # not bootstrapping
