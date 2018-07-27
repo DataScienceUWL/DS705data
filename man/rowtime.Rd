@@ -29,8 +29,8 @@ Row Times
     \item{\code{endo}}{Endomorphy}
     \item{\code{meso}}{Mesomorphy}
     \item{\code{ecto}}{Ectomorphy}
-    \item{\code{exp_var}}{Collegiate experience, yrs}
-    \item{\code{pre_exp}}{Pre-collegiate experience, yrs}
+    \item{\code{exp_var}}{Collegiate experience, 1=Yes, 0=No}
+    \item{\code{pre_exp}}{Pre-collegiate experience, 1=Yes, 0=No}
       }
 }
 \details{
